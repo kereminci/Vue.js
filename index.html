@@ -1,0 +1,14 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+ <p>{{name}}</p>
+ <p v-if="name !== 'Max'">Name updated</p>
+ <button v-on:click="changeName">Change name</button>
+<button v-on:click="addElement">New Element</button>
+<ul>
+  <li v-for="element in elements"
+  v-bind:id = " 'el' + element  ">
+  Element {{element}}
+  </li>
+</ul>
+</div>
